@@ -1,5 +1,5 @@
 - name: Task to boot a system using an ISO from an HP iLO interface only if the system is an HP server
-  hosts: 130.175.202.99
+  hosts: all
   tasks:
   - block:
     - name: mount iso to ilo cdrom
