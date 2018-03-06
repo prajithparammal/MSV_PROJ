@@ -2,6 +2,6 @@
   hosts: all
   tasks:
    hpilo_boot:
-    - name: Patching Red Hat Enterprise Linux
-      debug:
-        msg: "Patched Red Hat Enterprise Linux. Now at: {{ ansible_distribution_version }}"
+    media: cdrom
+    image: http://distro.ibiblio.org/puppylinux/puppy-4.3.1/pup-431.iso
+        msg: "ISO mounted to ILO cdrom : {{ ansible_distribution_version }}"
