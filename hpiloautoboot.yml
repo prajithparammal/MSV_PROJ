@@ -1,6 +1,7 @@
-- name: Patch OS playbook
+- name: Task to boot a system using an ISO from an HP iLO interface only if the system is an HP server
   hosts: all
   tasks:
+   hpilo_boot:
     - name: Patching Red Hat Enterprise Linux
       debug:
         msg: "Patched Red Hat Enterprise Linux. Now at: {{ ansible_distribution_version }}"
