@@ -38,4 +38,8 @@
      - python-docker-py
   - name: Starting Docker service
     service: name=docker state=started enabled=True
+  - name: Clone awx.git to Remote system
+    git:
+     repo: 'https://github.com/ansible/awx.git'
+     dest: /tmp
     
