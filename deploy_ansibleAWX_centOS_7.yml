@@ -4,7 +4,8 @@
   tasks:
   - name: Disable firewalld
     service: 
-     name=firewalld state=disabled
+     name=firewalld 
+     state=disabled
   - name: Disable Selinux
     selinux: 
      state=disabled
