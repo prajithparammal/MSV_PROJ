@@ -36,3 +36,6 @@
      - gcc-c++
      - bzip2
      - python-docker-py
+  - name: Starting Docker service
+    service: name=docker state=started enabled=True
+    
