@@ -9,7 +9,7 @@
 #     enabled=False
   - name: Disable firewalld
     service: name=firewalld state=stopped enabled=False
-     when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7'
+    when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7'
   - name: Disable IPables
     service: name=iptables state=stopped enabled=no
     when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '6'
