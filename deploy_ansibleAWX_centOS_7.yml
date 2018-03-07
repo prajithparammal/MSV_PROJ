@@ -25,17 +25,17 @@
   - name: Install and configuring epel-release repository
     yum: name=epel-release state=latest
   - name: Install pre-requiste rpm packages for Ansible AWX
-    yum: pkg={{item}} state=present exclude=dcoker-io*
+    yum: pkg={{item}} state=present exclude=docker-io*
     with_items:
      - git
      - gettext
-     - ansible
      - docker.x86_64
      - nodejs
      - npm
      - gcc-c++
      - bzip2
      - python-docker-py
+#    yum: name=ansible state=present exclude=docker-io*
   - name: Starting Docker service
     service: name=docker state=started enabled=True
   - name: Clone awx.git to Remote system
