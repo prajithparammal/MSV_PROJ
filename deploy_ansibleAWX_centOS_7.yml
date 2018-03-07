@@ -6,7 +6,7 @@
     service: 
      name=firewalld 
      state=stopped
-     enabled: False
+     enabled=False
   - name: Disable Selinux
     selinux: 
      state=disabled
