@@ -10,6 +10,11 @@
   - name: Disable Selinux
     selinux: 
      state=disabled
+  - name: RedHat | placeholder true for ipv6 in modprobe
+    lineinfile: "dest=/etc/sysctl.d/ipv6.conf line='net.ipv6.conf.all.disable_ipv6 = 1' create=yes"
+    notify:
+    - rmmodipv6
+    when: ansible_os_family == 'RedHat'
   - name: Restart server
     command: /sbin/shutdown -r +1
     async: 0
