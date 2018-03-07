@@ -25,7 +25,7 @@
   - name: Install and configuring epel-release repository
     yum: name=epel-release state=latest
   - name: Install pre-requiste rpm packages for Ansible AWX
-    yum: pkg={{item}} state=present
+    yum: pkg={{item}} state=present exclude=dcoker-io*
     with_items:
      - git
      - gettext
