@@ -3,10 +3,10 @@
   hosts: all
   tasks:
   - name: Disable firewalld
-    service: 
-     name=firewalld 
-     state=stopped
-     enabled=False
+#    service: 
+#     name=firewalld 
+#     state=stopped
+#     enabled=False
   - name: Disable Selinux
     selinux: 
      state=disabled
