@@ -2,11 +2,6 @@
 - name: Installing Ansible AWX in CENTOS 7
   hosts: all
   tasks:
-#  - name: Disable firewalld
-#    service: 
-#     name=firewalld 
-#     state=stopped
-#     enabled=False
   - name: Disable firewalld
     service: name=firewalld state=stopped enabled=False
     when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7'
@@ -20,8 +15,8 @@
      line: 'SELINUX=disabled'
   - name: Disable IPV6
     lineinfile: "dest=/etc/sysctl.d/ipv6.conf line='net.ipv6.conf.all.disable_ipv6 = 1' create=yes"
-#  - name: Restart server
-#    command: /sbin/shutdown -r +1
-#    async: 0
-#    poll: 0
-#    ignore_errors: true
+  - name: Restart server
+    command: /sbin/shutdown -r +1
+    async: 0
+    poll: 0
+    ignore_errors: true
