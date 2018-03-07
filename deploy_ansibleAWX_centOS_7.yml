@@ -24,3 +24,15 @@
     local_action: wait_for host={{ ansible_ssh_host }} state=started
   - name: Install and configuring epel-release repository
     yum: name=epel-release state=latest
+  - name: Install pre-requiste rpm packages for Ansible AWX
+    yum: pkg={{item}} state=installed
+    with_items:
+     - git
+     - gettext
+     - ansible
+     - docker
+     - nodejs
+     - npm
+     - gcc-c++
+     - bzip2
+     - python-docker-py
