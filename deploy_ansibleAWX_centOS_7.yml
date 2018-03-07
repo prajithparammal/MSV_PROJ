@@ -2,14 +2,14 @@
 - name: Installing Ansible AWX in CENTOS 7
   hosts: all
   task:
-    - name: Disable firewalld
-      service: 
-       name=firewalld state=disabled
-    - name: Disable Selinux
-      selinux: 
-       state=disabled
-    - name: Restart server
-      command: /sbin/shutdown -r +1
-      async: 0
-      poll: 0
-      ignore_errors: true
+  - name: Disable firewalld
+    service: 
+     name=firewalld state=disabled
+  - name: Disable Selinux
+    selinux: 
+     state=disabled
+  - name: Restart server
+    command: /sbin/shutdown -r +1
+    async: 0
+    poll: 0
+    ignore_errors: true
