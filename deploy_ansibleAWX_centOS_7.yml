@@ -30,7 +30,7 @@
      - git
      - gettext
      - ansible
-     - docker
+     - docker-
      - nodejs
      - npm
      - gcc-c++
