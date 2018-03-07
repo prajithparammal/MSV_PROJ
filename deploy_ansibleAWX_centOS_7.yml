@@ -1,7 +1,7 @@
 ---
 - name: Installing Ansible AWX in CENTOS 7
+  hosts: all
   task:
-  - block:
     - name: Disable firewalld
       service: 
        name=firewalld state=disabled
