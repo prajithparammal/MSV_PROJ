@@ -1,4 +1,4 @@
-
+---
 - name: Installing Ansible AWX in CENTOS 7
   task:
   - block:
@@ -8,6 +8,6 @@
       selinux: state=disabled
     - name: Restart server
       command: /sbin/shutdown -r +1
-      async: 0
-      poll: 0
-      ignore_errors: true
+       async: 0
+       poll: 0
+       ignore_errors: true
