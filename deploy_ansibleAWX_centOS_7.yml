@@ -15,7 +15,7 @@
   - name: Disable IPV6
     lineinfile: "dest=/etc/sysctl.d/ipv6.conf line='net.ipv6.conf.all.disable_ipv6 = 1' create=yes"
     notify:
-    - rmmodipv6
+    rmmodipv6
     when: ansible_os_family == 'RedHat'
   - name: Restart server
     command: /sbin/shutdown -r +1
