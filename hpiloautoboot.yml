@@ -1,10 +1,10 @@
-- name: Task to boot a system using an ISO from an HP iLO interface only if the system is an HP server
-  hosts: all
-  tasks:
-  -name: Mount ISO
-    hpilo_boot:
-      host: 130.175.202.99
-      login: ILOadmin
-      password: DXCp24!!
-      media: cdrom
-      image: http://distro.ibiblio.org/puppylinux/puppy-4.3.1/pup-431.iso
+- hosts: all                                        
+  gather_facts: no                                  
+  tasks:                                            
+    - name: Task to boot a system using an ISO from an HP iLO interface only if the system is an HP server
+      hpilo_boot:                                                                                        
+        host: 130.175.202.99                       
+        login: ILOadmin
+        password: DXCp24!!
+        media: cdrom
+        image: http://distro.ibiblio.org/puppylinux/puppy-4.3.1/pup-431.iso
