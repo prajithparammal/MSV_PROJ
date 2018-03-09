@@ -16,6 +16,3 @@
     media: cdrom
     image: http://distro.ibiblio.org/puppylinux/puppy-4.3.1/pup-431.iso
   when: cmdb_hwmodel.startswith('HP ')
-  - delegate_to: localhost
-    debug:
-     var: ansible_host
