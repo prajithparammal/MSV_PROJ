@@ -1,11 +1,11 @@
-- hosts: 130.175.202.99                                        
+- hosts: ILO
   gather_facts: no
   strategy: debug
-  tasks:                                            
+  tasks:
     - name: Task to boot a system using an ISO from an HP iLO interface only if the system is an HP server
-      hpilo_boot:                                                                                        
-        host: 130.175.202.99                       
+      hpilo_boot:
+        host: 130.175.202.99
         login: ILOadmin
         password: DXCp24!!
         media: cdrom
-        image: http://52.191.198.178:8080/VMware-ESXi-6.0.0-Update3.iso
+        image: "http://52.191.198.178:8080/VMware-ESXi-6.0.0-Update3.iso"
