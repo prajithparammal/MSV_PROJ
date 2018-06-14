@@ -1,2 +1,5 @@
 ---
 - name: Install packages on linux machine
+  hosts: all
+  ping:
+   data: crash
