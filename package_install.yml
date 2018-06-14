@@ -1,6 +1,7 @@
 ---
 - name: internet services
   hosts: all
+  connection: local
   tasks:
   - ping:
       data: crash
