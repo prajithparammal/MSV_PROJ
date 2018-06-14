@@ -4,4 +4,6 @@
   gather_facts: True
   connection: local
   tasks:
-  - debug: var=hostvars[inventory_hostname]['ansible_enp0s3']['ipv4']['address']
+    - debug: var=ansible_all_ipv4_addresses
+    - debug: var=ansible_default_ipv4.address
+    - debug: var=ansible_hostname
