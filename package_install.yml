@@ -1,6 +1,7 @@
 ---
 - name: internet services
   hosts: all
+  gather_facts: True
   connection: local
   tasks:
-  - setup: 
+  - debug: var=hostvars[inventory_hostname]['ansible_enp0s3']['ipv4']['address']
