@@ -1,5 +1,6 @@
 ---
-- name: Install packages on linux machine
+- name: internet services
   hosts: all
-  ping:
-   data: crash
+  tasks:
+  - ping:
+      data: crash
