@@ -1,5 +1,5 @@
 ---
-- name: internet services
+- name: Checking host details and status
   hosts: all
   gather_facts: True
   connection: local
