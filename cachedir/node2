@@ -25,16 +25,16 @@
     "ansible_date_time": {
         "date": "2018-06-15", 
         "day": "15", 
-        "epoch": "1529062248", 
+        "epoch": "1529062659", 
         "hour": "07", 
-        "iso8601": "2018-06-15T11:30:48Z", 
-        "iso8601_basic": "20180615T073048545369", 
-        "iso8601_basic_short": "20180615T073048", 
-        "iso8601_micro": "2018-06-15T11:30:48.545458Z", 
-        "minute": "30", 
+        "iso8601": "2018-06-15T11:37:39Z", 
+        "iso8601_basic": "20180615T073739085752", 
+        "iso8601_basic_short": "20180615T073739", 
+        "iso8601_micro": "2018-06-15T11:37:39.085853Z", 
+        "minute": "37", 
         "month": "06", 
-        "second": "48", 
-        "time": "07:30:48", 
+        "second": "39", 
+        "time": "07:37:39", 
         "tz": "EDT", 
         "tz_offset": "-0400", 
         "weekday": "Friday", 
@@ -347,13 +347,13 @@
         "SELINUX_USE_CURRENT_RANGE": "", 
         "SHELL": "/bin/bash", 
         "SHLVL": "2", 
-        "SSH_CLIENT": "192.168.122.1 34962 22", 
-        "SSH_CONNECTION": "192.168.122.1 34962 192.168.122.11 22", 
+        "SSH_CLIENT": "192.168.122.1 35862 22", 
+        "SSH_CONNECTION": "192.168.122.1 35862 192.168.122.11 22", 
         "SSH_TTY": "/dev/pts/0", 
         "TERM": "xterm", 
         "USER": "root", 
         "XDG_RUNTIME_DIR": "/run/user/0", 
-        "XDG_SESSION_ID": "42", 
+        "XDG_SESSION_ID": "44", 
         "_": "/usr/bin/python"
     }, 
     "ansible_fips": false, 
@@ -479,8 +479,8 @@
     "ansible_memfree_mb": 1380, 
     "ansible_memory_mb": {
         "nocache": {
-            "free": 1577, 
-            "used": 262
+            "free": 1578, 
+            "used": 261
         }, 
         "real": {
             "free": 1380, 
@@ -497,10 +497,10 @@
     "ansible_memtotal_mb": 1839, 
     "ansible_mounts": [
         {
-            "block_available": 5442665, 
+            "block_available": 5442638, 
             "block_size": 4096, 
             "block_total": 5762305, 
-            "block_used": 319640, 
+            "block_used": 319667, 
             "device": "/dev/mapper/rhel_node1-root", 
             "fstype": "xfs", 
             "inode_available": 11491187, 
@@ -508,7 +508,7 @@
             "inode_used": 39053, 
             "mount": "/", 
             "options": "rw,seclabel,relatime,attr2,inode64,noquota", 
-            "size_available": 22293155840, 
+            "size_available": 22293045248, 
             "size_total": 23602401280, 
             "uuid": "d8f577f9-c99a-4441-bd68-ae7ef61650b4"
         }, 
@@ -623,7 +623,7 @@
     ], 
     "ansible_system_capabilities_enforced": "True", 
     "ansible_system_vendor": "Red Hat", 
-    "ansible_uptime_seconds": 86176, 
+    "ansible_uptime_seconds": 86587, 
     "ansible_user_dir": "/root", 
     "ansible_user_gecos": "root", 
     "ansible_user_gid": 0, 

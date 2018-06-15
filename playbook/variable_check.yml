@@ -8,3 +8,8 @@
     - debug: msg="{{ ansible_hostname }}"
     - debug: msg="{{ ansible_ens3['ipv4'] }}"
     - debug: msg="{{ ansible_ens3.ipv4.address }}"
+
+    - name: Execute shell command
+      command: "uname -a"
+      register: result
+    - debug: var=result
