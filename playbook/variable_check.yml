@@ -1,0 +1,10 @@
+- name: variable check/display playbook
+  hosts: all
+  gather_facts: True
+  vars:
+    test_var: testing
+  tasks:
+    - debug: var=test_var
+    - debug: msg="{{ ansible_hostname }}"
+    - debug: msg="{{ ansible_ens3.ipv4 }}"
+    - debug: msg="{{ ansible_ens3.ipv4.address }}"

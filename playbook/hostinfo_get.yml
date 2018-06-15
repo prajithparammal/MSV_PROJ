@@ -2,7 +2,6 @@
 - name: Checking host details and status
   hosts: all
   gather_facts: True
-  connection: local
   tasks:
     - debug: var=ansible_all_ipv4_addresses
     - debug: var=ansible_hostname
