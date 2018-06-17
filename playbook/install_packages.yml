@@ -1,0 +1,18 @@
+---
+- name: Install packages based on matching criteria
+  hosts: all
+  tasks:
+    - name: Install apche
+      when: ansible_hostname == "node1"
+      package:
+        name: httpd
+        state: latest
+      register: result
+    - debug: var=result
+    - name: Install nc
+      when: ansible_hostname == "node2"
+      package:
+        name: nc
+        state: latest
+      register: result
+    - debug: var=result
