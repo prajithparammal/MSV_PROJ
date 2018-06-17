@@ -9,10 +9,10 @@
         state: latest
       register: result
     - debug: var=result
-    - name: Install nc
+    - name: Install zip
       when: ansible_hostname == "node2"
       package:
-        name: nc
+        name: zip
         state: latest
       register: result
     - debug: var=result
