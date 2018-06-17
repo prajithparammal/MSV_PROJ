@@ -1,0 +1,12 @@
+---
+- name: Install multiple packages
+  hosts: all
+  tasks:
+    - name: Install packages on centos/rhel
+      package: name={{item}} state=present
+      with_items:
+        - vim
+        - httpd
+        - zip
+      register: result
+    - debug: var=result
