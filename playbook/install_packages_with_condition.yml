@@ -7,12 +7,12 @@
       package:
         name: httpd
         state: latest
-#      register: result
-#    - debug: var=result
+      register: result
+    - debug: var=result
     - name: Install zip
       when: ansible_hostname == "node2"
       package:
         name: zip
         state: latest
-#      register: result
-#    - debug: var=result
+      register: result
+    - debug: var=result
