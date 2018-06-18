@@ -1,3 +1,9 @@
 [all]
 node1
 node2
+
+[web]
+node1
+
+[app]
+node2
