@@ -1,6 +1,9 @@
 [all]
-node1
+node1 
 node2
+node3
+node4
+node5 ansible_ssh_user=prajith
 
 [web]
 node1

@@ -2,17 +2,18 @@
 - name: Install packages based on matching criteria
   hosts: all
   tasks:
-    - name: Install apche
-      when: ansible_hostname == "node1"
+    - name: Install apache on Ubuntu
+      when: ansible_distribution == "Ubuntu"
+      package:
+        name: apache2
+        state: latest
+      become: true
+      register: result
+#    - debug: var=result
+    - name: Install apache on Redhat
+      when: ansible_distribution == "RedHat"
       package:
         name: httpd
         state: latest
       register: result
-    - debug: var=result
-    - name: Install zip
-      when: ansible_hostname == "node2"
-      package:
-        name: zip
-        state: latest
-      register: result
-    - debug: var=result
+#    - debug: var=result
