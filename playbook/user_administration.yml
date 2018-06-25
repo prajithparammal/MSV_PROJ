@@ -1,0 +1,12 @@
+---
+- name: Adding new users and add them to group
+  hosts: node2
+  tasks:
+    - name: Adding new users and add them to group
+      user: 
+        name: "{{ item.name }}"
+        state: present
+        groups: "{{ item.groups }}"
+      with_items:
+        - { name: 'bob', groups: 'wheel' }
+        - { name: 'joe', groups: 'root' }

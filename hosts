@@ -4,6 +4,7 @@ node2
 node3
 node4
 node5 ansible_ssh_user=prajith
+node6 ansible_ssh_user=prajith
 
 [web]
 node1

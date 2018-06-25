@@ -1,23 +1,28 @@
 ---
 - name: Install multiple packages
   hosts: all
+  become: True
   tasks:
     - name: Install packages on centos/rhel
-      package: name={{item}} state=present
+      package: 
+        name: "{{item}}" 
+        state: present
       with_items:
         - vim
         - httpd
         - zip
 
-- name: Install multiple packages
-  hosts: all
-  vars:
-    packages: 
-      - vim
-      - httpd
-      - zip
-  tasks:
-    - name: Install packages on centos/rhel
-      package: name={{item}} state=present
-      with_items: "{{packages}}"
 
+
+#- name: Install multiple packages
+#  hosts: all
+#  vars:
+#    packages: 
+#      - vim
+#      - httpd
+#      - zip
+#  tasks:
+#    - name: Install packages on centos/rhel
+#      package: name={{item}} state=present
+#      with_items: packages
+#
