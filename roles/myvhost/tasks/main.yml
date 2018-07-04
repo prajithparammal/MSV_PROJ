@@ -1,2 +1,29 @@
 ---
 # tasks file for myvhost
+- name: Install httpd package
+  package:
+    name: httpd
+    state: latest
+
+- name: Start and enable httpd service
+  service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deliver html content
+  copy:
+    src: files/
+    dest: "/var/www/vhosts/{{ ansible_hostname}}"
+    
+- name: copy config file from template
+  template:
+    src: vhost.conf.j2
+    dest: /etc/httpd/conf.d/vshost.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart httpd
+  
+
