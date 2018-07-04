@@ -1,8 +1,0 @@
----
-# tasks file for myvhost
-- name: Install httpd
-  package: name=httpd state=latest
-
-- name: start and enable httpd service
-  service: name=httpd state=started enabled=true
-  
