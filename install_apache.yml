@@ -1,0 +1,5 @@
+- name: role to install apache server
+  hosts: node2
+
+  roles:
+    - myvhost

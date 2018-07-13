@@ -1,0 +1,11 @@
+- name: configure mofd
+  hosts: node3
+  vars:
+    system_owner: prajithparammal@gmail.com
+  tasks:
+    - template:
+        src: motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: 0644

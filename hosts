@@ -6,8 +6,13 @@ node4
 node5 ansible_ssh_user=prajith
 node6 ansible_ssh_user=prajith
 
-[web]
+[win]
 node1
+[win:vars]
+ansible_user=localadmin
+ansible_password=q1w2e3r4t5GG!!
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
 
 [app]
 node2
